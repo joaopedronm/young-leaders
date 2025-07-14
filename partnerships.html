@@ -108,6 +108,7 @@
 											<ul class="sub-menu">
 												<li aria-haspopup="true"><a href="about.html">About Us</a></li>
 												<li aria-haspopup="true"><a href="gallery.html">Gallery</a></li>
+                        <li aria-haspopup="true"><a href="contact.html">Contact</a></li>
 											</ul>
 								    </li>
 
@@ -144,7 +145,7 @@
 
 											<!-- GET STARTED BUTTON -->
 											<li class="nl-simple" aria-haspopup="true">
-												<a href="signup-1.html" class="btn r-06 btn--theme hover--tra-coal last-link"><i class="fa-brands fa-paypal"></i>Make a Donation</a>
+												<a href="https://ko-fi.com/youngleadersfoundation" class="btn r-06 btn--theme hover--tra-coal last-link" target="_blank" rel="noopener"><i class="fa-brands fa-paypal"></i>Make a Donation</a>
 											</li>
 
 	        					</ul>
@@ -180,7 +181,7 @@
                 <!-- Buttons -->	
                 <div class="btns-group">
                   <a href="#china" class="btn btn-md r-06 btn--theme hover--theme">Explore Countries</a>
-                  <a href="#contact" class="btn btn-md r-06 btn--tra-black hover--theme">Make a Donation</a> 
+                  <a href="https://ko-fi.com/youngleadersfoundation" class="btn btn-md r-06 btn--tra-black hover--theme" target="_blank" rel="noopener">Make a Donation</a> 
                 </div>
 
               </div>
@@ -203,7 +204,7 @@
 						<!-- IMAGE BLOCK -->
 						<div class="col-md-6">
 							<div class="img-block left-column wow animate__animated animate__fadeInRight">
-								<img class="img-fluid mb-3" src="images/china-02.png" alt="content-image" style="border-radius: 12px;">
+								<img class="img-fluid mb-3" src="images/gallery/young-leaders-38.jpg" alt="content-image" style="border-radius: 12px;">
 							</div>
 						</div>
 
@@ -603,6 +604,49 @@
         </div>
       </section>
 
+            <!-- PHOTO GALLERY
+			============================================= -->
+			<section class="pt-100 gallery-section division">
+				<div class="container">
+					<div class="row">
+
+						<!-- Gallery Items -->
+						<!-- Repita esse bloco para cada imagem -->
+						<div class="col-md-4 col-sm-6 mb-4">
+							<a href="#" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="images/gallery/young-leaders-01.jpg">
+								<img class="img-fluid rounded shadow-sm" src="images/gallery/young-leaders-06.jpg" alt="Gallery Image 1">
+							</a>
+						</div>
+
+						<!-- Repita os blocos abaixo com imagens diferentes -->
+						<div class="col-md-4 col-sm-6 mb-4">
+							<a href="#" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="images/gallery/young-leaders-02.jpg">
+								<img class="img-fluid rounded shadow-sm" src="images/gallery/young-leaders-07.jpg" alt="Gallery Image 2">
+							</a>
+						</div>
+
+						<div class="col-md-4 col-sm-6 mb-4">
+							<a href="#" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="images/gallery/young-leaders-03.jpg">
+								<img class="img-fluid rounded shadow-sm" src="images/gallery/young-leaders-27.jpg" alt="Gallery Image 3">
+							</a>
+						</div>
+
+					</div> <!-- End row -->
+
+				</div> <!-- End container -->
+			</section>
+
+			<!-- MODAL -->
+			<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content bg-transparent border-0">
+						<div class="modal-body text-center p-0">
+							<img id="modalImage" src="" class="img-fluid rounded" alt="Expanded view">
+						</div>
+					</div>
+				</div>
+			</div>
+
 
 			<!-- FOOTER-6
 			============================================= -->
@@ -637,7 +681,8 @@
 											<li><p><a href="about.html">About Us</a></p></li>
 											<li><p><a href="partnerships.html">Partnerships</a></p></li>							
 											<li><p><a href="projects.html">Projects</a></p></li>							
-											<li><p><a href="global-presence.html">Global Presence</a></p></li>							
+											<li><p><a href="global-presence.html">Global Presence</a></p></li>
+                      <li><p><a href="contact.html">Contact</a></p></li>							
 										</ul>
 
 									</div>
@@ -748,6 +793,26 @@
 		<!-- Custom Script -->		
 		<script src="js/custom.js"></script>	
 
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const photoModal = document.getElementById('photoModal');
+        const modalImage = document.getElementById('modalImage');
+
+        photoModal.addEventListener('show.bs.modal', function (event) {
+          const trigger = event.relatedTarget;
+
+          // Garante que o trigger é válido antes de acessar data-img
+          if (trigger && trigger.getAttribute) {
+            const imgSrc = trigger.getAttribute('data-img');
+            modalImage.src = imgSrc;
+          } else {
+            // Impede a abertura automática
+            event.preventDefault();
+          }
+        });
+      });
+    </script>
 		
 	</body> 
 

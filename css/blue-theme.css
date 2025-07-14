@@ -3004,8 +3004,16 @@ span.sm-info {
 /*------------------------------------------*/
 
 #hero-7 {
-  background-image: url(../images/hero-7.jpg);
-  padding-top: 130px;
+  background-image: url(../images/hero-7.png);
+  background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 160px;
+  padding-bottom: 85px;
+  /* Garante que o conteúdo interno fique acima da imagem fixa */
+  position: relative;
+  z-index: 1;
 }
 
 .theme--dark #hero-7 {
@@ -3077,8 +3085,15 @@ span.sm-info {
 
 #hero-9 {
   background-image: url(../images/hero-9.png);
+  background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 160px;
   padding-bottom: 85px;
+  /* Garante que o conteúdo interno fique acima da imagem fixa */
+  position: relative;
+  z-index: 1;
 }
 
 #hero-9 .wave-shape-bottom path {
